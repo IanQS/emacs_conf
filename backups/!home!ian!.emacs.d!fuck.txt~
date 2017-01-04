@@ -1,0 +1,45 @@
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(bm-buffer-persistence t)
+ '(bm-repository-file "/home/ian/.emacs.d/.bm-repository")
+ '(bm-repository-size 500)
+ '(custom-safe-themes
+   (quote
+    ("e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "70403e220d6d7100bae7775b3334eddeb340ba9c37f4b39c189c2c29d458543b" "cdbd0a803de328a4986659d799659939d13ec01da1f482d838b68038c1bb35e8" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default)))
+ '(doc-view-continuous t)
+ '(elpy-rpc-timeout 5)
+ '(f3-default-directory (quote \'choose))
+ '(font-use-system-font t)
+ '(global-button-lock-mode t)
+ '(neo-theme (quote nerd))
+ '(neo-window-fixed-size nil)
+ '(neo-window-position (quote left))
+ '(neo-window-width 20)
+ '(package-selected-packages
+   (quote
+    (persp-projectile esup ## helm-projectile projectile whitespace-cleanup-mode virtualenvwrapper telephone-line magit git-gutter-fringe+ git-gutter+ avy sphinx-doc zenburn-theme zenburn volume vimish-fold tramp-term swiper solarized-theme smex smart-mode-line rainbow-delimiters python-environment neotree moe-theme latex-pretty-symbols jabber hydra hlinum helm git-commit flycheck-pos-tip flycheck-cython fixmee epc elpy ein darkokai-theme bm avy-menu autopair auto-complete-octave auto-complete auctex ample-theme aggressive-indent)))
+ '(projectile-keymap-prefix "C-c C-p")
+
+ '(safe-local-variable-values (quote ((eval venv-workon "Peloton"))))
+ '(shift-select-mode nil)
+ '(sml/extra-filler 1)
+ '(sml/name-width 35)
+ '(sml/pos-minor-modes-separator "-")
+ '(sml/pre-minor-modes-separator ":")
+ '(vimish-fold-global-mode t)
+ '(windmove-wrap-around t)
+ '(yas-snippet-dirs
+   (quote
+    ("/home/ian/.emacs.d/yasnippet-snippets" yas-installed-snippets-dir "/home/ian/.emacs.d/elpa/elpy-20161229.1103/snippets/"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(highlight-indentation-current-column-face ((t nil)))
+ '(highlight-indentation-face ((t (:background "#dedede"))))
+ '(vimish-fold-overlay ((t (:inherit highlight :foreground "spring green")))))
+(put 'dired-find-alternate-file 'disabled nil)
