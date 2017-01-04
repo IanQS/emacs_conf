@@ -2,7 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
-;; TODO: work on projectile, autovenv
+;; TODO: work on projectile, autovenv, create snippet for gdoc, autocomplete
+;; integration with yasnippets
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;; 1) User Config ;;
 ;;;;;;;;;;;;;;;;;;;;;;;
@@ -102,16 +103,18 @@
 (add-hook 'after-revert-hook 'bm-buffer-restore)
 
 (require 'company)
-(add-hook 'after-init-hook 'global-company-mode)
-(define-key company-mode-map [tab] 'company-complete)
-(define-key company-mode-map (kbd "TAB") 'company-complete)
+(global-company-mode t)
 
-(require 'elpy)(elpy-enable)(elpy-use-ipython)
+(require 'elpy)
+(elpy-enable)
+(elpy-use-ipython)
 
-(require 'flycheck)(global-flycheck-mode)
-
-(require 'git-gutter+)(require 'git-gutter-fringe+)
+(require 'git-gutter+)
+(require 'git-gutter-fringe+)
 (global-git-gutter+-mode 1)
+
+(require 'flycheck)
+(add-hook 'after-programming-hook 'global-flycheck-mode)
 
 (require 'helm)  ;; M-x b stuff
 (global-set-key (kbd "M-x") 'helm-M-x)
@@ -195,6 +198,15 @@
             '(:with company-yasnippet))))
 
 (setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))
+
+(defun indent-or-complete ()
+  (interactive)
+  (if (looking-at "\\_>")
+      (company-complete-common)
+    (indent-according-to-mode)))
+
+(global-set-key [tab] 'indent-or-complete)
+(global-set-key (kbd "TAB") 'indent-or-complete)
 
 (setq-default mode-line-format (cons '(:exec venv-current-name) mode-line-format))
 
