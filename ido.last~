@@ -2,6 +2,14 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/classifiers/" . "clustering/")
+ ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/" . "classifiers/")
+ ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/" . "TF3/")
+ ("/home/ian/Dropbox/dbDesktop/ML/Research/explainable-ai/" . "deconv/")
+ ("/home/ian/Dropbox/dbDesktop/ML/Research/" . "explainable-ai/")
+ ("/home/ian/Dropbox/dbDesktop/ML/" . "Research/")
+ ("/home/ian/Dropbox/dbDesktop/" . "ML/")
+ ("/home/ian/Dropbox/" . "dbDesktop/")
  ("/home/ian/.emacs.d/" . "elpa/")
  ("/home/ian/" . ".emacs.d/")
 )
@@ -9,23 +17,49 @@
 ;; ----- ido-work-directory-list -----
 (
  "/home/ian/.emacs.d/"
- "/home/ian/"
+ "/home/ian/Dropbox/dbDesktop/ML/Research/explainable-ai/"
+ "/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/"
+ "/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/classifiers/clustering/"
  "/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/classifiers/autoencoder/"
+ "/home/ian/"
+ "/home/ian/Dropbox/dbDesktop/ML/Research/explainable-ai/deconv/"
 )
 
 ;; ----- ido-work-file-list -----
 (
  "init.el"
- "fuck.txt"
+ ".dir-locals.el"
+ "dbscan.py"
+ "AutoEncoder.py"
  "test.py"
  "autoencoder_code.py"
+ "KerasDeconv.py"
+ "fuck.txt"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/ian/.emacs.d/" (22636 20448 974518 168000) "ido.last" "backups/" "network-security.data" "url/" "./" ".bm-repository" "init.el" "snippets/" "../" ".git/" "auto-save-list/" "elpa/" "recentf")
+ ("/home/ian/.emacs.d/" (22636 23755 972249 216000) "yasnippet-snippets/" "ido.last" "backups/" "network-security.data" "url/" "./" ".bm-repository" "init.el" "projectile-bookmarks.eld" "snippets/" "../" ".git/" "auto-save-list/" "elpa/" "recentf" "ido.last~")
 
- ("/home/ian/" (22636 20449 397853 326000) ".tmux.conf.local" ".warprc" ".tmux/" "dorpbox/" ".i3/" ".cache/" ".bash_logout" ".ipynb_checkpoints/" ".matlab/" ".jupyter/" ".dropbox-dist/" ".gem/" ".antigen/" ".oh-my-zsh/" ".cmake/" ".zcompdump" "test_flymake.py" ".node-gyp/" "Desktop/" ".spacemacs" ".gimp-2.8/" ".lesshst" ".dropbox/" ".fehbg" ".bash_history" "test.py" ".keras/" ".npm/" ".zshenv" "Dropbox/" ".downloaded_datasets/" ".Xauthority" ".java/" ".rtags/" ".zshrc.pre-oh-my-zsh" ".zsh-update" ".pypirc" ".esd_auth" ".virtualenvs/" ".local/" ".Xmodmap" "Downloads/" ".data/" ".wget-hsts" ".pki/" "mturk/" ".zshrc" "archiso/" "./" ".undodir/" ".elinks/" ".git_zsh_alias" ".electron/" ".viminfo" ".bm-repository" ".gitconfig" ".mysql_history" ".smex-items" ".CLion2016.3/" ".tmux.conf" ".subversion/" ".zhistory" "antigen/" ".gnome/" ".mono/" ".i3status.conf" ".aspell.en.prepl" ".git-credentials" ".mozilla/" ".git-credential-cache/" ".terminfo/" ".thumbnails/" ".bash_profile" "../" ".aspell.en.pws" ".mplayer/" ".lastpass/" ".vim/" ".cs_cache" ".emacs.d/" ".xmodmap-IanThinkPad" ".env/" "node_modules/" ".ssh/" ".xinitrc" ".dmenu_cache" ".vim-bookmarks" ".python_history" ".xbindkeys_config/" ".viminfo.tmp" ".config/" ".zshrc.omz-uninstalled-20160724232403" "Documents/" ".ipython/" ".zsh_history" ".gnupg/" ".rdm" ".theano/")
+ ("/home/ian/" (22636 24414 427770 966000) ".tmux.conf.local" ".warprc" ".tmux/" "dorpbox/" ".i3/" ".cache/" ".bash_logout" ".ipynb_checkpoints/" ".matlab/" ".jupyter/" ".dropbox-dist/" ".gem/" ".antigen/" ".oh-my-zsh/" ".cmake/" ".zcompdump" ".node-gyp/" "Desktop/" ".spacemacs" ".gimp-2.8/" ".lesshst" ".dropbox/" ".fehbg" ".bash_history" "test.py" ".keras/" ".npm/" ".zshenv" "Dropbox/" ".downloaded_datasets/" ".Xauthority" ".java/" ".rtags/" ".zshrc.pre-oh-my-zsh" ".zsh-update" ".pypirc" ".esd_auth" ".virtualenvs/" ".local/" ".Xmodmap" "Downloads/" ".data/" ".wget-hsts" ".pki/" "mturk/" ".zshrc" "archiso/" "./" ".undodir/" ".elinks/" ".git_zsh_alias" ".electron/" ".viminfo" ".bm-repository" ".gitconfig" ".mysql_history" ".smex-items" ".CLion2016.3/" ".tmux.conf" ".subversion/" ".zhistory" "antigen/" ".gnome/" ".mono/" ".i3status.conf" ".aspell.en.prepl" ".git-credentials" ".mozilla/" ".git-credential-cache/" ".terminfo/" ".thumbnails/" ".bash_profile" "../" ".aspell.en.pws" ".mplayer/" ".lastpass/" ".vim/" ".cs_cache" ".emacs.d/" ".xmodmap-IanThinkPad" ".env/" "node_modules/" ".ssh/" ".xinitrc" ".dmenu_cache" ".vim-bookmarks" ".python_history" ".xbindkeys_config/" ".viminfo.tmp" ".config/" ".zshrc.omz-uninstalled-20160724232403" "Documents/" ".ipython/" ".zsh_history" ".gnupg/" ".rdm" ".theano/")
+
+ ("/home/ian/Desktop/" (22635 60681 945150 803000) "c-demo-project/" "tabGroups-manual-20161219-234900.json" "./" "updates.txt" "../" ".emacs.d/")
+
+ ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/classifiers/clustering/" (22636 22635 644482 155000) "k_means.py" "graphs/" "__pycache__/" "./" "kfold_cross_validation.py" "kfold_validation_dbscan.py" "../" "dbscan.py")
+
+ ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/" (22636 22398 706730 479000) "classifiers/" "dataset/" "lib/" ".dir-locals.el" ".gitignore" "cpp_implementations/" "./" "rnn_rewritten/" "pip-selfcheck.json" "physical-stat/" "README.md" "../" "LICENSE" ".git/" "rnn/" "mysql/" "timeseries/")
+
+ ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/classifiers/autoencoder/" (22636 22080 955315 904000) "__pycache__/" "./" "AutoEncoder.py" "../" "autoencoder_code.py")
+
+ ("/home/ian/Dropbox/dbDesktop/ML/Research/explainable-ai/deconv/" (22636 22022 121726 853000) ".ipynb_checkpoints/" "./" "utils.py" ".#utils.py" "get_model.py" "Data/" "components/" "../" "KerasDeconv.py" "run_deconv.py")
+
+ ("/home/ian/Dropbox/dbDesktop/ML/Research/explainable-ai/" (22635 14848 952362 666000) ".ipynb_checkpoints/" ".MT/" "deconv/" ".dir-locals.el" ".gitignore" ".scrape_im/" "./" "cam-san/" "image_boxes/" "../" ".git/" "documents/" "todo.org")
+
+ ("/home/ian/Dropbox/" (22636 13462 700865 937000) ".dropbox" "Reinstall/" "Personal_stuff/" "./" "../" ".dropbox.cache/" "dbDesktop/")
+
+ ("/home/ian/Dropbox/dbDesktop/" (22629 24094 694357 180000) ".ipynb_checkpoints/" "General.org" "./" "cpp/" "ML/" "CMU/" "old/" "../" "contrib/")
+
+ ("/home/ian/Dropbox/dbDesktop/ML/" (22482 394 759655 111000) "Papers/" "./" "books/" "Research/" ".numpyDocs/" "../" "stanford/" "tutorials/")
 
  ("/home/ian/.emacs.d/elpa/" (22636 20000 826024 54000) "whitespace-cleanup-mode-20150603.447/" "rainbow-delimiters-20160430.2358/" "vimish-fold-20161231.1600/" "smex-20151212.1409/" "git-commit-20161227.1257/" "hydra-20161204.505/" "pkg-info-20150517.443/" "hlinum-20160521.2112/" "find-file-in-project-20161202.2205/" "persp-projectile-20160709.2317/" "yasnippet-20161221.1953/" "epl-20150517.433/" "projectile-20161229.44/" "bm-20170103.1424/" "helm-core-20170103.444/" "virtualenvwrapper-20161002.1515/" "aggressive-indent-20161201.1001/" "telephone-line-20161105.840/" "neotree-20161228.1739/" "autopair-20160304.437/" "highlight-indentation-20161012.209/" "./" "helm-projectile-20161213.2311/" "pyvenv-20160527.442/" "elpy-20161229.1103/" "helm-20170103.444/" "popup-20160709.729/" "dash-20161121.55/" "monokai-theme-20161216.628/" "git-gutter-fringe+-20140729.403/" "f-20161002.800/" "avy-0.4.0/" "archives/" "flycheck-20170101.1502/" "../" "company-20161231.837/" "s-20160928.636/" "ivy-20161228.1838/" "fringe-helper-20140620.1409/" "async-20161103.1036/" "with-editor-20161231.826/" "gnupg/" "magit-popup-20161227.1257/" "latex-unicode-math-mode-20161201.835/" "git-gutter+-20151204.923/" "avy-0.4.0.signed" "perspective-20160609.1444/" "magit-20161231.757/" "latex-pretty-symbols-20151112.244/")
 
@@ -33,11 +67,7 @@
 
  ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/" (22616 43219 539784 651000) ".ipynb_checkpoints/" "Papers/" "./" "PDL_Instructions.pdf" "pelBase.org" "TF3/" "../")
 
- ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/" (22635 14892 305930 276000) "classifiers/" "dataset/" "lib/" ".dir-locals.el" ".gitignore" "cpp_implementations/" "./" "rnn_rewritten/" "pip-selfcheck.json" "physical-stat/" "README.md" "../" "LICENSE" ".git/" "rnn/" "mysql/" "timeseries/")
-
  ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/classifiers/" (22628 28525 547146 251000) ".ipynb_checkpoints/" "utilityFunctions/" "narwhal_setup.sh" "__pycache__/" "./" "data/" "../" "clustering/" "autoencoder/")
-
- ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/classifiers/autoencoder/" (22636 15692 451480 717000) "__pycache__/" "./" "AutoEncoder.py" "../" "autoencoder_code.py")
 
  ("/home/ian/.emacs.d/snippets/" (22636 11449 651271 736000) "./" "../")
 )

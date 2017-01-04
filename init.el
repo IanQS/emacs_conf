@@ -2,12 +2,62 @@
 ;;; Commentary:
 ;;; Code:
 
+;; TODO: work on projectile, autovenv
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;; 1) User Config ;;
 ;;;;;;;;;;;;;;;;;;;;;;;
 (setq user-full-name "Ian Quah")
 (setq user-mail-address "ianquah@hotmail.com")
 ;; Please don't email me if you have any problems. This is my personal config.
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(bm-buffer-persistence t)
+ '(bm-repository-file "/home/ian/.emacs.d/.bm-repository")
+ '(bm-repository-size 500)
+ '(custom-safe-themes
+   (quote
+    ("e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "70403e220d6d7100bae7775b3334eddeb340ba9c37f4b39c189c2c29d458543b" "cdbd0a803de328a4986659d799659939d13ec01da1f482d838b68038c1bb35e8" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default)))
+ '(doc-view-continuous t)
+ '(elpy-rpc-timeout 5)
+ '(f3-default-directory (quote \'choose))
+ '(font-use-system-font t)
+ '(global-button-lock-mode t)
+ '(neo-theme (quote nerd))
+ '(neo-window-fixed-size nil)
+ '(neo-window-position (quote left))
+ '(neo-window-width 20)
+ '(package-selected-packages
+   (quote
+    (yasnippet-bundle persp-projectile esup helm-projectile projectile whitespace-cleanup-mode virtualenvwrapper magit git-gutter-fringe+ git-gutter+ avy sphinx-doc zenburn-theme zenburn volume vimish-fold tramp-term swiper solarized-theme smex smart-mode-line rainbow-delimiters python-environment neotree moe-theme latex-pretty-symbols jabber hydra hlinum helm git-commit flycheck-pos-tip flycheck-cython fixmee epc elpy ein darkokai-theme bm avy-menu autopair auto-complete-octave auto-complete auctex ample-theme aggressive-indent)))
+ '(projectile-keymap-prefix "C-c C-p")
+ '(safe-local-variable-values
+   (quote
+    ((eval venv-workon "explainable-ai")
+     (eval venv-workon "Peloton"))))
+ '(shift-select-mode nil)
+ '(sml/extra-filler 1)
+ '(sml/name-width 35)
+ '(sml/pos-minor-modes-separator "-")
+ '(sml/pre-minor-modes-separator ":")
+ '(sml/theme (quote dark))
+ '(vimish-fold-global-mode t)
+ '(windmove-wrap-around t)
+ '(yas-snippet-dirs
+   (quote
+    ("/home/ian/.emacs.d/yasnippet-snippets" yas-installed-snippets-dir "/home/ian/.emacs.d/elpa/elpy-20161229.1103/snippets/"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(highlight-indentation-current-column-face ((t nil)))
+ '(highlight-indentation-face ((t (:background "#dedede"))))
+ '(vimish-fold-overlay ((t (:inherit highlight :foreground "spring green")))))
+(put 'dired-find-alternate-file 'disabled nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;; 2) Define package sources ;;
@@ -90,6 +140,7 @@
 (require 'persp-projectile)
 
 (require 'projectile)
+(projectile-mode)
 (define-key projectile-mode-map projectile-keymap-prefix nil)
 (define-key projectile-mode-map (kbd "C-c C-p") #'projectile-command-map)
 (setq projectile-switch-project-action 'venv-projectile-auto-workon)
@@ -108,8 +159,7 @@
 
 (require 'smex)
 
-(require 'telephone-line)
-(telephone-line-mode 1)
+(sml/setup)  ;; Smart-mode-line
 
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
@@ -128,6 +178,9 @@
 
 (require 'yasnippet)
 (yas-global-mode 1)
+
+(setq-default mode-line-format (cons '(:exec venv-current-name) mode-line-format))
+
 
 ;; 4) Package Keybindings------------------------------------------------------
 
@@ -182,11 +235,12 @@
   ("k" persp-remove-buffer "Kill just the buffer")
   ("K" persp-kill "Kill the perspective")
   ("c" persp-switch "Create/ switch to frame")
+  ("p" projectile-mode "Flip mode")
   ("s" projectile-persp-switch-project "Projectile-persp switch project")
   ) (global-set-key (kbd "C-c p") 'hydra-persp/body)
 
 (defhydra hydra-magit ()
-  "Perspectives"
+  "Run magit"
   ("s" magit-status "Open Magit status")
   ("c" magit-dispatch-popup "Close magit statusbar")
   ) (global-set-key (kbd "C-c m") 'hydra-magit/body)
@@ -238,49 +292,6 @@
 ;; indentation using spaces, 4
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(bm-buffer-persistence t)
- '(bm-repository-file "/home/ian/.emacs.d/.bm-repository")
- '(bm-repository-size 500)
- '(custom-safe-themes
-   (quote
-    ("e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "70403e220d6d7100bae7775b3334eddeb340ba9c37f4b39c189c2c29d458543b" "cdbd0a803de328a4986659d799659939d13ec01da1f482d838b68038c1bb35e8" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default)))
- '(doc-view-continuous t)
- '(elpy-rpc-timeout 5)
- '(f3-default-directory (quote \'choose))
- '(font-use-system-font t)
- '(global-button-lock-mode t)
- '(neo-theme (quote nerd))
- '(neo-window-fixed-size nil)
- '(neo-window-position (quote left))
- '(neo-window-width 20)
- '(package-selected-packages
-   (quote
-    (yasnippet-bundle persp-projectile esup helm-projectile projectile whitespace-cleanup-mode virtualenvwrapper telephone-line magit git-gutter-fringe+ git-gutter+ avy sphinx-doc zenburn-theme zenburn volume vimish-fold tramp-term swiper solarized-theme smex smart-mode-line rainbow-delimiters python-environment neotree moe-theme latex-pretty-symbols jabber hydra hlinum helm git-commit flycheck-pos-tip flycheck-cython fixmee epc elpy ein darkokai-theme bm avy-menu autopair auto-complete-octave auto-complete auctex ample-theme aggressive-indent)))
- '(projectile-keymap-prefix "C-c C-p")
- '(safe-local-variable-values (quote ((eval venv-workon "Peloton"))))
- '(shift-select-mode nil)
- '(sml/extra-filler 1)
- '(sml/name-width 35)
- '(sml/pos-minor-modes-separator "-")
- '(sml/pre-minor-modes-separator ":")
- '(vimish-fold-global-mode t)
- '(windmove-wrap-around t)
- '(yas-snippet-dirs
-   (quote
-    ("/home/ian/.emacs.d/yasnippet-snippets" yas-installed-snippets-dir "/home/ian/.emacs.d/elpa/elpy-20161229.1103/snippets/"))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(highlight-indentation-current-column-face ((t nil)))
- '(highlight-indentation-face ((t (:background "#dedede"))))
- '(vimish-fold-overlay ((t (:inherit highlight :foreground "spring green")))))
-(put 'dired-find-alternate-file 'disabled nil)
+
 (provide 'init)
 ;;; init ends here

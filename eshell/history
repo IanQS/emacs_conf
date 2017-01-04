@@ -1,0 +1,5 @@
+ls
+cd Dropbox/dbDesktop/ML/Research/Peloton/TF3/
+ls
+touch DESCRIPTION
+cp DESCRIPTION ../../explainable-ai/
