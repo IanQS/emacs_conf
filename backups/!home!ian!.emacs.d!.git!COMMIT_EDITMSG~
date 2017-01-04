@@ -1,64 +1,14 @@
 
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
-# On branch master
+# On branch pre-AC
 # Changes to be committed:
-#	new file:   auto-save-list/.saves-1451-localhost~
+#	new file:   auto-save-list/.saves-5714-localhost~
 #	modified:   backups/!home!ian!.emacs.d!ido.last~
-#	modified:   backups/!home!ian!.emacs.d!init.el~
-#	new file:   backups/!home!ian!.emacs.d!projectile-bookmarks.eld~
 #	modified:   backups/!home!ian!.emacs.d!recentf~
-#	new file:   backups/!home!ian!Dropbox!dbDesktop!ML!Research!Peloton!TF3!.dir-locals.el~
-#	new file:   elpa/elpy-20161229.1103/elpy/__init__.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/__pycache__/__init__.cpython-35.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/__pycache__/__main__.cpython-35.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/__pycache__/auto_pep8.cpython-35.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/__pycache__/compat.cpython-35.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/__pycache__/impmagic.cpython-35.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/__pycache__/jedibackend.cpython-35.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/__pycache__/pydocutils.cpython-35.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/__pycache__/ropebackend.cpython-35.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/__pycache__/rpc.cpython-35.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/__pycache__/server.cpython-35.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/__pycache__/yapfutil.cpython-35.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/auto_pep8.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/compat.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/impmagic.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/jedibackend.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/pydocutils.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/ropebackend.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/rpc.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/server.pyc
-#	new file:   elpa/elpy-20161229.1103/elpy/yapfutil.pyc
-#	new file:   elpa/rich-minority-20160725.1255/rich-minority-autoloads.el
-#	new file:   elpa/rich-minority-20160725.1255/rich-minority-pkg.el
-#	new file:   elpa/rich-minority-20160725.1255/rich-minority.el
-#	new file:   elpa/rich-minority-20160725.1255/rich-minority.elc
-#	new file:   elpa/smart-mode-line-20160818.508/smart-mode-line-autoloads.el
-#	new file:   elpa/smart-mode-line-20160818.508/smart-mode-line-dark-theme.el
-#	new file:   elpa/smart-mode-line-20160818.508/smart-mode-line-dark-theme.elc
-#	new file:   elpa/smart-mode-line-20160818.508/smart-mode-line-light-theme.el
-#	new file:   elpa/smart-mode-line-20160818.508/smart-mode-line-light-theme.elc
-#	new file:   elpa/smart-mode-line-20160818.508/smart-mode-line-pkg.el
-#	new file:   elpa/smart-mode-line-20160818.508/smart-mode-line-respectful-theme.el
-#	new file:   elpa/smart-mode-line-20160818.508/smart-mode-line-respectful-theme.elc
-#	new file:   elpa/smart-mode-line-20160818.508/smart-mode-line.el
-#	new file:   elpa/smart-mode-line-20160818.508/smart-mode-line.elc
-#	deleted:    elpa/telephone-line-20161105.840/telephone-line-autoloads.el
-#	deleted:    elpa/telephone-line-20161105.840/telephone-line-pkg.el
-#	deleted:    elpa/telephone-line-20161105.840/telephone-line-segments.el
-#	deleted:    elpa/telephone-line-20161105.840/telephone-line-segments.elc
-#	deleted:    elpa/telephone-line-20161105.840/telephone-line-separators.el
-#	deleted:    elpa/telephone-line-20161105.840/telephone-line-separators.elc
-#	deleted:    elpa/telephone-line-20161105.840/telephone-line-utils.el
-#	deleted:    elpa/telephone-line-20161105.840/telephone-line-utils.elc
-#	deleted:    elpa/telephone-line-20161105.840/telephone-line.el
-#	deleted:    elpa/telephone-line-20161105.840/telephone-line.elc
-#	new file:   eshell/history
-#	new file:   eshell/lastdir
+#	modified:   backups/!home!ian!test.py~
 #	modified:   ido.last
 #	modified:   ido.last~
 #	modified:   init.el
-#	new file:   projectile-bookmarks.eld
 #	modified:   recentf
 #

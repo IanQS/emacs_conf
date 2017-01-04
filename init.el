@@ -103,7 +103,7 @@
 (add-hook 'after-revert-hook 'bm-buffer-restore)
 
 (require 'company)
-(global-company-mode t)
+(global-company-mode)
 
 (require 'elpy)
 (elpy-enable)
@@ -205,8 +205,9 @@
       (company-complete-common)
     (indent-according-to-mode)))
 
-(global-set-key [tab] 'indent-or-complete)
-(global-set-key (kbd "TAB") 'indent-or-complete)
+(define-key company-mode-map [tab] 'indent-or-complete)
+(define-key company-mode-map(kbd "TAB") 'indent-or-complete)
+
 
 (setq-default mode-line-format (cons '(:exec venv-current-name) mode-line-format))
 
