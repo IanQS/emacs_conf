@@ -28,24 +28,24 @@
 ;; ----- ido-work-file-list -----
 (
  "init.el"
+ "throw.txt"
+ "test.py"
+ "unedited.txt"
+ "edited.txt"
  "projectile-bookmarks.eld"
  ".xinitrc"
  "dbscan.py"
  "DESCRIPTION"
  "KerasDeconv.py"
- ".dir-locals.el"
- "AutoEncoder.py"
- "test.py"
- "autoencoder_code.py"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/ian/.emacs.d/" (22636 32437 653392 618000) "yasnippet-snippets/" "ido.last" "backups/" "network-security.data" "url/" "./" ".bm-repository" "init.el" "projectile-bookmarks.eld" "snippets/" "../" ".git/" "auto-save-list/" "elpa/" "eshell/" "recentf" "ido.last~")
+ ("/home/ian/" (22636 39329 438660 373000) ".tmux.conf.local" ".warprc" ".tmux/" "dorpbox/" ".i3/" ".cache/" ".bash_logout" ".ipynb_checkpoints/" ".matlab/" ".jupyter/" ".dropbox-dist/" ".gem/" ".antigen/" ".oh-my-zsh/" "unedited.txt" ".cmake/" ".zcompdump" "test_flymake.py" ".node-gyp/" "Desktop/" ".spacemacs" ".gimp-2.8/" ".lesshst" ".dropbox/" ".fehbg" ".bash_history" "test.py" ".keras/" ".npm/" ".zshenv" "Dropbox/" ".downloaded_datasets/" ".Xauthority" ".java/" ".rtags/" ".zshrc.pre-oh-my-zsh" ".zsh-update" ".pypirc" ".esd_auth" ".virtualenvs/" ".local/" ".Xmodmap" "Downloads/" ".data/" ".wget-hsts" ".pki/" "mturk/" ".zshrc" "archiso/" "./" ".undodir/" ".elinks/" ".git_zsh_alias" ".electron/" ".viminfo" ".bm-repository" "edited.txt" ".gitconfig" ".mysql_history" ".smex-items" ".CLion2016.3/" ".tmux.conf" ".subversion/" ".zhistory" "antigen/" ".gnome/" ".mono/" ".i3status.conf" ".aspell.en.prepl" ".git-credentials" ".mozilla/" ".git-credential-cache/" ".terminfo/" ".thumbnails/" ".bash_profile" "../" ".aspell.en.pws" ".mplayer/" ".lastpass/" ".vim/" ".cs_cache" ".emacs.d/" ".xmodmap-IanThinkPad" ".env/" "node_modules/" ".ssh/" ".xinitrc" ".dmenu_cache" ".vim-bookmarks" ".python_history" ".xbindkeys_config/" ".viminfo.tmp" ".config/" ".zshrc.omz-uninstalled-20160724232403" "Documents/" ".ipython/" ".zsh_history" ".gnupg/" ".rdm" ".theano/")
+
+ ("/home/ian/.emacs.d/" (22636 39328 788656 679000) "yasnippet-snippets/" "ido.last" "backups/" "network-security.data" "url/" "./" ".bm-repository" "init.el" "projectile-bookmarks.eld" "snippets/" "../" ".git/" "auto-save-list/" "elpa/" "eshell/" "recentf" "ido.last~")
 
  ("/home/ian/Dropbox/" (22636 28387 334721 96000) ".dropbox" "Reinstall/" "Personal_stuff/" "./" "../" ".dropbox.cache/" "dbDesktop/")
-
- ("/home/ian/" (22636 27713 707676 78000) ".tmux.conf.local" ".warprc" ".tmux/" "dorpbox/" ".i3/" ".cache/" ".bash_logout" ".ipynb_checkpoints/" ".matlab/" ".jupyter/" ".dropbox-dist/" ".gem/" ".antigen/" ".oh-my-zsh/" ".cmake/" ".zcompdump" ".node-gyp/" "Desktop/" ".spacemacs" ".gimp-2.8/" ".lesshst" ".dropbox/" ".fehbg" ".bash_history" "test.py" ".keras/" ".npm/" ".zshenv" "Dropbox/" ".downloaded_datasets/" ".Xauthority" ".java/" ".rtags/" ".zshrc.pre-oh-my-zsh" ".zsh-update" ".pypirc" ".esd_auth" ".virtualenvs/" ".local/" ".Xmodmap" "Downloads/" ".data/" ".wget-hsts" ".pki/" "mturk/" ".zshrc" "archiso/" "./" ".undodir/" ".elinks/" ".git_zsh_alias" ".electron/" ".viminfo" ".bm-repository" ".gitconfig" ".mysql_history" ".smex-items" ".CLion2016.3/" ".tmux.conf" ".subversion/" ".zhistory" "antigen/" ".gnome/" ".mono/" ".i3status.conf" ".aspell.en.prepl" ".git-credentials" ".mozilla/" ".git-credential-cache/" ".terminfo/" ".thumbnails/" ".bash_profile" "../" ".aspell.en.pws" ".mplayer/" ".lastpass/" ".vim/" ".cs_cache" ".emacs.d/" ".xmodmap-IanThinkPad" ".env/" "node_modules/" ".ssh/" ".xinitrc" ".dmenu_cache" ".vim-bookmarks" ".python_history" ".xbindkeys_config/" ".viminfo.tmp" ".config/" ".zshrc.omz-uninstalled-20160724232403" "Documents/" ".ipython/" ".zsh_history" ".gnupg/" ".rdm" ".theano/")
 
  ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/" (22636 25197 270355 27000) "classifiers/" "dataset/" "lib/" "DESCRIPTION" ".dir-locals.el" ".gitignore" "cpp_implementations/" "./" "rnn_rewritten/" "pip-selfcheck.json" "physical-stat/" "README.md" "../" "LICENSE" ".git/" "rnn/" "mysql/" "timeseries/")
 

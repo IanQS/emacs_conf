@@ -1,0 +1,6 @@
+
+;; (require 'projectile)
+;; (projectile-mode)
+;; (define-key projectile-mode-map projectile-keymap-prefix nil)
+;; (define-key projectile-mode-map (kbd "C-c C-p") #'projectile-command-map)
+;; (setq projectile-switch-project-action 'venv-projectile-auto-workon)

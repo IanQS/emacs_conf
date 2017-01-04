@@ -32,8 +32,8 @@
  '(neo-window-width 20)
  '(package-selected-packages
    (quote
-    (yasnippet-bundle persp-projectile esup helm-projectile projectile whitespace-cleanup-mode virtualenvwrapper magit git-gutter-fringe+ git-gutter+ avy sphinx-doc zenburn-theme zenburn volume vimish-fold tramp-term swiper solarized-theme smex smart-mode-line rainbow-delimiters python-environment neotree moe-theme latex-pretty-symbols jabber hydra hlinum helm git-commit flycheck-pos-tip flycheck-cython fixmee epc elpy ein darkokai-theme bm avy-menu autopair auto-complete-octave auto-complete auctex ample-theme aggressive-indent)))
- '(projectile-keymap-prefix "C-c C-p")
+    (bug-hunter yasnippet-bundle persp-projectile esup helm-projectile projectile whitespace-cleanup-mode virtualenvwrapper magit git-gutter-fringe+ git-gutter+ avy sphinx-doc zenburn-theme zenburn volume vimish-fold tramp-term swiper solarized-theme smex smart-mode-line rainbow-delimiters python-environment neotree moe-theme latex-pretty-symbols jabber hydra hlinum helm git-commit flycheck-pos-tip flycheck-cython fixmee epc elpy ein darkokai-theme bm avy-menu autopair auto-complete-octave auto-complete auctex ample-theme aggressive-indent)))
+ '(projectile-keymap-prefix "")
  '(safe-local-variable-values
    (quote
     ((eval venv-workon "explainable-ai")
@@ -48,14 +48,14 @@
  '(windmove-wrap-around t)
  '(yas-snippet-dirs
    (quote
-    ("/home/ian/.emacs.d/yasnippet-snippets" yas-installed-snippets-dir "/home/ian/.emacs.d/elpa/elpy-20161229.1103/snippets/"))))
+    ("/home/ian/.emacs.d/yasnippet-snippets" "/home/ian/.emacs.d/elpa/elpy-20161229.1103/snippets/"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(highlight-indentation-current-column-face ((t nil)))
- '(highlight-indentation-face ((t (:background "#dedede"))))
+ '(highlight-indentation-face ((t (:background "gray12"))))
  '(vimish-fold-overlay ((t (:inherit highlight :foreground "spring green")))))
 (put 'dired-find-alternate-file 'disabled nil)
 
@@ -101,6 +101,11 @@
 ;; Restore bookmarks when buffer is reverted.
 (add-hook 'after-revert-hook 'bm-buffer-restore)
 
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+(define-key company-mode-map [tab] 'company-complete)
+(define-key company-mode-map (kbd "TAB") 'company-complete)
+
 (require 'elpy)(elpy-enable)(elpy-use-ipython)
 
 (require 'flycheck)(global-flycheck-mode)
@@ -137,14 +142,13 @@
 (require 'perspective)
 (persp-mode)
 
-(require 'persp-projectile)
-
 (require 'projectile)
 (projectile-mode)
 (define-key projectile-mode-map projectile-keymap-prefix nil)
 (define-key projectile-mode-map (kbd "C-c C-p") #'projectile-command-map)
 (setq projectile-switch-project-action 'venv-projectile-auto-workon)
 
+(require 'persp-projectile)
 
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
@@ -178,6 +182,19 @@
 
 (require 'yasnippet)
 (yas-global-mode 1)
+(define-key yas-minor-mode-map [(tab)] nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+
+(defvar company-mode/enable-yas t
+  "Enable yasnippet for all backends.")
+
+(defun company-mode/backend-with-yas (backend)
+  (if (or (not company-mode/enable-yas) (and (listp backend) (member 'company-yasnippet backend)))
+      backend
+    (append (if (consp backend) backend (list backend))
+            '(:with company-yasnippet))))
+
+(setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))
 
 (setq-default mode-line-format (cons '(:exec venv-current-name) mode-line-format))
 
