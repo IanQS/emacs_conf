@@ -260,7 +260,7 @@
  '(neo-window-width 20)
  '(package-selected-packages
    (quote
-    (yasnippet-bundle persp-projectile esup ## helm-projectile projectile whitespace-cleanup-mode virtualenvwrapper telephone-line magit git-gutter-fringe+ git-gutter+ avy sphinx-doc zenburn-theme zenburn volume vimish-fold tramp-term swiper solarized-theme smex smart-mode-line rainbow-delimiters python-environment neotree moe-theme latex-pretty-symbols jabber hydra hlinum helm git-commit flycheck-pos-tip flycheck-cython fixmee epc elpy ein darkokai-theme bm avy-menu autopair auto-complete-octave auto-complete auctex ample-theme aggressive-indent)))
+    (yasnippet-bundle persp-projectile esup helm-projectile projectile whitespace-cleanup-mode virtualenvwrapper telephone-line magit git-gutter-fringe+ git-gutter+ avy sphinx-doc zenburn-theme zenburn volume vimish-fold tramp-term swiper solarized-theme smex smart-mode-line rainbow-delimiters python-environment neotree moe-theme latex-pretty-symbols jabber hydra hlinum helm git-commit flycheck-pos-tip flycheck-cython fixmee epc elpy ein darkokai-theme bm avy-menu autopair auto-complete-octave auto-complete auctex ample-theme aggressive-indent)))
  '(projectile-keymap-prefix "C-c C-p")
  '(safe-local-variable-values (quote ((eval venv-workon "Peloton"))))
  '(shift-select-mode nil)

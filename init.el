@@ -282,6 +282,5 @@
  '(highlight-indentation-face ((t (:background "#dedede"))))
  '(vimish-fold-overlay ((t (:inherit highlight :foreground "spring green")))))
 (put 'dired-find-alternate-file 'disabled nil)
-
 (provide 'init)
 ;;; init ends here
