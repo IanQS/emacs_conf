@@ -2,8 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-;; TODO: work on projectile, autovenv, create snippet for gdoc, autocomplete
-;; integration with yasnippets
+;; TODO: work on projectile, autovenv, create snippet for python
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;; 1) User Config ;;
 ;;;;;;;;;;;;;;;;;;;;;;;
@@ -27,13 +26,16 @@
  '(f3-default-directory (quote \'choose))
  '(font-use-system-font t)
  '(global-button-lock-mode t)
+ '(irony-additional-clang-options
+   (quote
+    ("-Wall -Wextra -pedantic -Werror -Wuninitialized -std=c++11")))
  '(neo-theme (quote nerd))
  '(neo-window-fixed-size nil)
  '(neo-window-position (quote left))
  '(neo-window-width 20)
  '(package-selected-packages
    (quote
-    (bug-hunter yasnippet-bundle persp-projectile esup helm-projectile projectile whitespace-cleanup-mode virtualenvwrapper magit git-gutter-fringe+ git-gutter+ avy sphinx-doc zenburn-theme zenburn volume vimish-fold tramp-term swiper solarized-theme smex smart-mode-line rainbow-delimiters python-environment neotree moe-theme latex-pretty-symbols jabber hydra hlinum helm git-commit flycheck-pos-tip flycheck-cython fixmee epc elpy ein darkokai-theme bm avy-menu autopair auto-complete-octave auto-complete auctex ample-theme aggressive-indent)))
+    (cmake-ide company-irony-c-headers flycheck-irony rtags company-irony helm-gtags bug-hunter yasnippet-bundle persp-projectile esup helm-projectile projectile whitespace-cleanup-mode virtualenvwrapper magit git-gutter-fringe+ git-gutter+ avy sphinx-doc zenburn-theme zenburn volume vimish-fold tramp-term swiper solarized-theme smex smart-mode-line rainbow-delimiters python-environment neotree moe-theme latex-pretty-symbols jabber hydra hlinum helm git-commit flycheck-pos-tip flycheck-cython fixmee epc elpy ein darkokai-theme bm avy-menu autopair auto-complete-octave auto-complete auctex ample-theme aggressive-indent)))
  '(projectile-keymap-prefix "")
  '(safe-local-variable-values
    (quote
@@ -60,20 +62,24 @@
  '(vimish-fold-overlay ((t (:inherit highlight :foreground "spring green")))))
 (put 'dired-find-alternate-file 'disabled nil)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ;; 2) Define package sources ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;; 2) Define package sources ------------------------------------------------ ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (load "package")
 (package-initialize)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.org/packages/")))
+         ("marmalade" . "http://marmalade-repo.org/packages/")
+         ("melpa" . "http://melpa.org/packages/")))
 
-;; 3) Enable & Require Packages------------------------------------------------
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;; 3) Enable & Require Packages------------------------------------------------ ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'package) (package-initialize t)
 
 (add-to-list 'load-path
-             "~/.emacs.d/elpa")
+     "~/.emacs.d/elpa")
 
 (require 'aggressive-indent)
 (global-aggressive-indent-mode 1)
@@ -95,13 +101,14 @@
 ;; kill-buffer-hook is not called when emacs is killed, so we
 ;; must save all bookmarks first.
 (add-hook 'kill-emacs-hook '(lambda nil
-                              (bm-buffer-save-all)
-                              (bm-repository-save)))
+          (bm-buffer-save-all)
+          (bm-repository-save)))
 ;; Update bookmark repository when saving the file.
 (add-hook 'after-save-hook 'bm-buffer-save)
 ;; Restore bookmarks when buffer is reverted.
 (add-hook 'after-revert-hook 'bm-buffer-restore)
 
+(require 'cc-mode)
 (require 'company)
 (global-company-mode)
 
@@ -121,6 +128,8 @@
 
 (require 'helm-projectile)
 (helm-projectile-on)
+
+(require 'helm-gtags)
 
 (require 'hlinum)
 (hlinum-activate)
@@ -150,6 +159,7 @@
 (define-key projectile-mode-map projectile-keymap-prefix nil)
 (define-key projectile-mode-map (kbd "C-c C-p") #'projectile-command-map)
 (setq projectile-switch-project-action 'venv-projectile-auto-workon)
+(setq projectile-completion-system 'helm)
 
 (require 'persp-projectile)
 
@@ -176,7 +186,7 @@
 
 (require 'virtualenvwrapper)
 (add-hook 'venv-postmkvirtualenv-hook
-          (lambda () (shell-command "pip install nose flake8 jedi rope h5py ipython numpy sklearn autopep8")))
+      (lambda () (shell-command "pip install nose flake8 jedi rope h5py ipython numpy sklearn autopep8")))
 
 (require 'windmove)
 
@@ -195,7 +205,7 @@
   (if (or (not company-mode/enable-yas) (and (listp backend) (member 'company-yasnippet backend)))
       backend
     (append (if (consp backend) backend (list backend))
-            '(:with company-yasnippet))))
+    '(:with company-yasnippet))))
 
 (setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))
 
@@ -212,7 +222,9 @@
 (setq-default mode-line-format (cons '(:exec venv-current-name) mode-line-format))
 
 
-;; 4) Package Keybindings------------------------------------------------------
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;; 4) Package Keybindings------------------------------------------------------ ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defhydra hydra-fold ()
   "textfold"
@@ -281,7 +293,35 @@
   ("h" windmove-right "Move to right frame")
   ) (global-set-key (kbd "C-c w") 'hydra-wm/body)
 
-;; 5) Changing Emacs Default Keybindings---------------------------------------
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;; 5) Changing Emacs Default Keybindings--------------------------------------- ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; C-definitions
+(setq
+ helm-gtags-ignore-case t
+ helm-gtags-auto-update t
+ helm-gtags-use-input-at-cursor t
+ helm-gtags-pulse-at-cursor t
+ helm-gtags-prefix-key "\C-cg"
+ helm-gtags-suggested-key-mapping t
+ )
+
+(require 'helm-gtags)
+;; Enable helm-gtags-mode
+(add-hook 'dired-mode-hook 'helm-gtags-mode)
+(add-hook 'eshell-mode-hook 'helm-gtags-mode)
+(add-hook 'c-mode-hook 'helm-gtags-mode)
+(add-hook 'c++-mode-hook 'helm-gtags-mode)
+(add-hook 'asm-mode-hook 'helm-gtags-mode)
+
+(define-key helm-gtags-mode-map (kbd "C-c g a") 'helm-gtags-tags-in-this-function)
+(define-key helm-gtags-mode-map (kbd "C-j") 'helm-gtags-select)
+(define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
+(define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
+(define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
+(define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
+
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C-z") nil)
@@ -289,7 +329,57 @@
 (global-set-key (kbd "<f2>") 'tramp)
 (global-set-key (kbd "<f3>") 'neotree-toggle)
 
-;; 6) Changing Emacs Defaults---------------------------------------------------
+(setq company-backends (delete 'company-semantic company-backends))
+(add-to-list 'company-backends 'company-c-headers)
+
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+
+(defun my-irony-mode-hook ()
+  (define-key irony-mode-map [remap completion-at-point]
+    'irony-completion-at-point-async)
+  (define-key irony-mode-map [remap complete-symbol]
+    'irony-completion-at-point-async))
+
+(add-hook 'irony-mode-hook 'my-irony-mode-hook)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+
+(add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
+(setq company-backends (delete 'company-semantic company-backends))
+(require 'company-irony-c-headers)
+(eval-after-load 'company
+  '(add-to-list
+    'company-backends '(company-irony-c-headers company-irony)))
+
+(defun indent-or-complete-C ()
+  (interactive)
+  (if (looking-at "\\_>")
+      (company-complete)
+    (indent-according-to-mode)))
+
+(setq company-idle-delay 0)
+(define-key c-mode-map [(tab)] 'indent-or-complete-C)
+(define-key c++-mode-map [(tab)] 'indent-or-complete-C)
+
+(add-hook 'c++-mode-hook 'flycheck-mode)
+(add-hook 'c-mode-hook 'flycheck-mode)
+
+(require 'flycheck-rtags)
+
+(defun my-flycheck-rtags-setup ()
+  (flycheck-select-checker 'rtags)
+  (setq-local flycheck-highlighting-mode nil) ;; RTags creates more accurate overlays.
+  (setq-local flycheck-check-syntax-automatically nil))
+;; c-mode-common-hook is also called by c++-mode
+(add-hook 'c-mode-common-hook #'my-flycheck-rtags-setup)
+
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;; 6) Changing Emacs Defaults--------------------------------------------------- ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-theme 'monokai t)
 
 (setq auto-save-default nil)

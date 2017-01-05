@@ -1,1 +1,1 @@
-("~/.emacs.d/")
+("~/.emacs.d/" "/tmp/build-irony-server-0.2.2-cvs/" "~/Dropbox/dbDesktop/cpp/code/book/code/" "~/Dropbox/dbDesktop/ML/Research/explainable-ai/" "~/Dropbox/dbDesktop/ML/Research/Peloton/TF3/")

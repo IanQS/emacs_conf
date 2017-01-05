@@ -2,35 +2,45 @@
 
 ;; ----- ido-last-directory-list -----
 (
- ("/home/ian/.emacs.d/yasnippet-snippets/" . "python-mode/")
+ ("/home/ian/Dropbox/dbDesktop/cpp/code/book/" . "code/")
+ ("/home/ian/Dropbox/dbDesktop/cpp/code/" . "book/")
+ ("/home/ian/Dropbox/dbDesktop/cpp/" . "code/")
+ ("/home/ian/.emacs.d/irony/" . "bin/")
+ ("/home/" . "ian/")
+ ("/" . "home/")
+ ("/home/ian/.emacs.d/yasnippet-snippets/" . "c++-mode/")
  ("/home/ian/.emacs.d/snippets/" . "python-mode/")
  ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/classifiers/" . "clustering/")
  ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/" . "classifiers/")
  ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/" . "TF3/")
  ("/home/ian/Dropbox/dbDesktop/ML/Research/explainable-ai/" . "deconv/")
- ("/home/ian/Dropbox/dbDesktop/ML/Research/" . "explainable-ai/")
+ ("/home/ian/Dropbox/dbDesktop/ML/Research/" . "Peloton/")
  ("/home/ian/Dropbox/dbDesktop/ML/" . "Research/")
- ("/home/ian/Dropbox/dbDesktop/" . "ML/")
+ ("/home/ian/Dropbox/dbDesktop/" . "cpp/")
  ("/home/ian/Dropbox/" . "dbDesktop/")
- ("/home/ian/.emacs.d/" . "yasnippet-snippets/")
- ("/home/ian/" . ".emacs.d/")
+ ("/home/ian/.emacs.d/" . "irony/")
+ ("/home/ian/" . "Dropbox/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/ian/Dropbox/dbDesktop/cpp/code/book/code/"
+ "/home/ian/.emacs.d/irony/bin/"
+ "/home/ian/Dropbox/dbDesktop/ML/Research/explainable-ai/"
+ "/home/ian/Dropbox/dbDesktop/ML/Research/explainable-ai/deconv/"
  "/home/ian/.emacs.d/"
  "/home/ian/.emacs.d/yasnippet-snippets/python-mode/"
  "/home/ian/"
  "/home/ian/.emacs.d/snippets/python-mode/"
  "/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/classifiers/clustering/"
  "/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/"
- "/home/ian/Dropbox/dbDesktop/ML/Research/explainable-ai/deconv/"
- "/home/ian/Dropbox/dbDesktop/ML/Research/explainable-ai/"
  "/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/classifiers/autoencoder/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "main.cpp"
+ "irony-server"
  "init.el"
  "test.py"
  "return"
@@ -39,15 +49,37 @@
  "defg"
  "deftest"
  "assertFalse"
- "with_statement"
- ".yas-parents"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/ian/.emacs.d/" (22637 28317 166026 512000) "yasnippet-snippets/" "ido.last" "backups/" "network-security.data" "./" ".bm-repository" "init.el" "projectile-bookmarks.eld" "snippets/" "../" ".git/" "auto-save-list/" "elpa/" "eshell/" "recentf" "ido.last~")
+ ("/home/ian/Dropbox/dbDesktop/cpp/code/book/code/" (22637 33385 337226 726000) "main.cpp" ".#main.cpp" "./" "../" "Sales_item.h" "Makefile")
 
- ("/home/ian/" (22637 28170 652282 416000) ".tmux.conf.local" ".warprc" ".tmux/" "dorpbox/" ".i3/" ".cache/" ".bash_logout" ".ipynb_checkpoints/" ".matlab/" ".jupyter/" ".dropbox-dist/" ".gem/" ".antigen/" ".oh-my-zsh/" ".cmake/" ".zcompdump" ".node-gyp/" "Desktop/" ".spacemacs" ".gimp-2.8/" ".lesshst" ".dropbox/" ".fehbg" ".bash_history" "test.py" ".keras/" ".npm/" ".zshenv" "Dropbox/" ".downloaded_datasets/" ".Xauthority" ".java/" ".rtags/" ".zshrc.pre-oh-my-zsh" ".zsh-update" ".pypirc" ".esd_auth" ".virtualenvs/" ".local/" ".Xmodmap" "Downloads/" ".data/" ".wget-hsts" ".pki/" "mturk/" ".zshrc" "archiso/" "./" ".undodir/" ".elinks/" ".git_zsh_alias" ".electron/" ".viminfo" ".bm-repository" ".gitconfig" ".mysql_history" ".smex-items" ".CLion2016.3/" ".tmux.conf" ".subversion/" ".zhistory" "antigen/" ".gnome/" ".mono/" ".i3status.conf" ".aspell.en.prepl" ".git-credentials" ".mozilla/" ".git-credential-cache/" ".terminfo/" ".thumbnails/" ".bash_profile" "../" ".aspell.en.pws" ".mplayer/" ".lastpass/" ".vim/" ".cs_cache" ".emacs.d/" ".xmodmap-IanThinkPad" ".env/" "node_modules/" ".ssh/" ".xinitrc" ".dmenu_cache" ".vim-bookmarks" ".python_history" ".xbindkeys_config/" ".viminfo.tmp" ".config/" ".zshrc.omz-uninstalled-20160724232403" "Documents/" ".ipython/" ".zsh_history" ".gnupg/" ".rdm" ".theano/")
+ ("/home/ian/.emacs.d/irony/bin/" (22637 32278 899811 268000) "irony-server" "./" "../")
+
+ ("/home/ian/.emacs.d/irony/" (22637 32278 899811 268000) "./" "../" "bin/")
+
+ ("/home/ian/.emacs.d/" (22637 32278 899811 268000) "yasnippet-snippets/" "irony/" "ido.last" "backups/" "network-security.data" "recentf~" "./" ".bm-repository" "init.el" "projectile-bookmarks.eld" "snippets/" "../" ".git/" "auto-save-list/" "elpa/" "eshell/" "recentf" "ido.last~")
+
+ ("/home/" (22481 59052 556180 343000) "./" "../" "ian/")
+
+ ("/tmp/" (22637 32278 879811 168000) ".X11-unix/" ".ICE-unix/" ".XIM-unix/" ".font-unix/" ".Test-unix/" "wpa_ctrl_366-1" "systemd-private-83ccf17e81c4420a85a4b655026d3801-ntpd.service-DbUpj3/" ".X0-lock" "qtsingleapp-FoxitR-1bb5-3e8-lockfile" "qtsingleapp-FoxitR-1bb5-3e8" ".esd-1000/" "903-linux-x64.zip" "babel-8462OxX/" "build-irony-server-0.2.2-cvs/" "../" "./")
+
+ ("/tmp/build-irony-server-0.2.2-cvs/" (22637 32278 903144 619000) "CMakeFiles/" "Testing/" "DartConfiguration.tcl" "src/" "docs/" "test/" "CMakeCache.txt" "Makefile" "cmake_install.cmake" "CTestTestfile.cmake" "bin/" "install_manifest.txt" "../" "./")
+
+ ("/home/ian/Dropbox/dbDesktop/ML/Research/explainable-ai/deconv/" (22637 31565 904277 299000) ".ipynb_checkpoints/" "./" "utils.py" ".#utils.py" "get_model.py" "Data/" "components/" "../" "KerasDeconv.py" "run_deconv.py")
+
+ ("/home/ian/" (22637 31082 418809 788000) ".tmux.conf.local" ".warprc" ".tmux/" "dorpbox/" ".i3/" ".cache/" ".bash_logout" ".ipynb_checkpoints/" ".matlab/" ".jupyter/" ".dropbox-dist/" ".gem/" ".antigen/" ".oh-my-zsh/" ".cmake/" ".zcompdump" ".node-gyp/" "Desktop/" ".spacemacs" ".gimp-2.8/" ".lesshst" ".dropbox/" ".fehbg" ".bash_history" "test.py" ".keras/" ".npm/" ".zshenv" "Dropbox/" ".downloaded_datasets/" ".Xauthority" ".java/" ".rtags/" ".zshrc.pre-oh-my-zsh" ".zsh-update" ".pypirc" ".esd_auth" ".virtualenvs/" ".local/" ".Xmodmap" "Downloads/" ".data/" ".wget-hsts" ".pki/" "mturk/" ".zshrc" "archiso/" "./" ".undodir/" ".elinks/" ".git_zsh_alias" ".electron/" ".viminfo" ".bm-repository" ".gitconfig" ".mysql_history" ".smex-items" ".CLion2016.3/" ".tmux.conf" ".subversion/" ".zhistory" "antigen/" ".gnome/" ".mono/" ".i3status.conf" ".aspell.en.prepl" ".git-credentials" ".mozilla/" ".git-credential-cache/" ".terminfo/" ".thumbnails/" ".bash_profile" "../" ".aspell.en.pws" ".mplayer/" ".lastpass/" ".vim/" ".cs_cache" ".emacs.d/" ".xmodmap-IanThinkPad" ".env/" "node_modules/" ".ssh/" ".xinitrc" ".dmenu_cache" ".vim-bookmarks" ".python_history" ".xbindkeys_config/" ".viminfo.tmp" ".config/" ".zshrc.omz-uninstalled-20160724232403" "Documents/" ".ipython/" ".zsh_history" ".gnupg/" ".rdm" ".theano/")
+
+ ("/home/ian/.emacs.d/yasnippet-snippets/c++-mode/" (22636 20635 582003 211000) "mme" "rpl" "ptn" "mrg" "phh" "cpy" "fori" "fne" "fin" "this" "delete" "srn" ".yas-setup.elc" "class" "enum" "mxe" "prp" "tryw" "operator+=" "oit" "mkh" "rtc" "trm" "d_operator[]" "lxc" "operator=" "spt" "dynamic_casting" "cout" "d_operator" "pack" "sth" "test_main" "srh" "io" "operator!=" "upr" "private" "constructor" "isu" "ltr" "ffo" "gnn" "operator_istream" "swr" "uqe" "erm" "fun_declaration" "cpn" "ihp" "iss" "rmf" "try" "ostream" "nno" "test case" "ignore" "operator+" "cni" "alo" "sti" "member_function" "fnd" "std_colon" "cnt" "nth" "ano" "rvr" "ppt" "mne" "sstream" "boost_require" "d_operator[]_const" "d_operator_istream" "./" "cstd" "fln" "shf" "cpp" "class11" "pst" "cpb" "rmi" "sts" "iterator" "sto" "cerr" "operator_ostream" "acm" "fni" "nxp" "cin" "namespace" "rvc" "ihu" "friend" "rpi" "ajf" "throw" "fil" "stv" ".yas-parents" "rci" "operator==" "gtest" "ns" "protected" "using" "lwr" "mpb" "tfm" "gnr" "../" "const_[]" "d_operator_ostream" "ipt" "ptc" "map" "test_suite" "rpc" "msm" "delete[]" "beginend" "operator[]" "cpi" "d+=" "public" "fixture" "str" "ita" "psc" "srt" "ucp" "rmv" "rmc" "fre" ".yas-setup.el" "std" "ipr" "rte" "inline" "assert" "vector" "acl" "module" "template" "doc" "eql")
+
+ ("/home/ian/Dropbox/" (22637 28042 805446 934000) ".dropbox" "Reinstall/" "Personal_stuff/" "./" "../" ".dropbox.cache/" "dbDesktop/")
+
+ ("/home/ian/Dropbox/dbDesktop/cpp/" (22635 60437 4068 799000) "code/" "./" "../" "cmake/" "C++ Primer.pdf")
+
+ ("/home/ian/Dropbox/dbDesktop/cpp/code/" (22631 15472 380334 314000) "book/" ".clang-format" "./" ".cs_files" "cpp-template/" "../")
+
+ ("/home/ian/Dropbox/dbDesktop/cpp/code/book/" (22631 13079 16399 273000) "code/" "resources/" ".ycm_extra_conf.py" "./" "../")
 
  ("/home/ian/.emacs.d/backups/" (22637 23128 118892 209000) "!home!ian!test.py~" "!home!ian!.emacs.d!.git!COMMIT_EDITMSG~" "./" "!home!ian!.emacs.d!throw.txt~" "!home!ian!.emacs.d!ido.last~" "!home!ian!.emacs.d!init.el~" "!home!ian!.emacs.d!recentf~" "../" "!home!ian!.emacs.d!projectile-bookmarks.eld~" "!home!ian!Dropbox!dbDesktop!ML!Research!Peloton!TF3!.dir-locals.el~" "!home!ian!.emacs.d!fuck.txt~")
 
@@ -66,10 +98,6 @@
  ("/home/ian/Dropbox/dbDesktop/ML/Research/Peloton/TF3/classifiers/clustering/" (22636 25327 753434 491000) "k_means.py" "graphs/" "__pycache__/" "./" "kfold_cross_validation.py" "kfold_validation_dbscan.py" "../" "dbscan.py")
 
  ("/home/ian/.emacs.d/snippets/" (22636 39641 787213 215000) "CONTRIBUTORS.txt" "f90-mode/" "elixir-mode/" "makefile-bsdmake-mode/" "nesc-mode/" "html-mode/" "conf-unix-mode/" "prog-mode/" "m4-mode/" "nsis-mode/" "lisp-interaction-mode/" "yaml-mode/" "web-mode" "ned-mode/" "makefile-mode/" "octave-mode/" "ruby-mode/" "enh-ruby-mode" "cperl-mode/" "perl-mode/" "c++-mode/" "dix-mode/" "antlr-mode/" "markdown-mode/" "nix-mode/" "rst-mode/" "./" "makefile-automake-mode/" "nxml-mode/" "python-mode/" "latex-mode/" "lua-mode/" "js-mode/" "cpp-omnet-mode/" "emacs-lisp-mode/" "haskell-mode/" "js3-mode" "sh-mode/" "js2-mode" "erlang-mode/" "udev-mode/" "org-mode/" "clojure-mode/" "go-mode/" "typerex-mode" "snippet-mode/" "malabar-mode/" "groovy-mode/" "text-mode/" "sql-mode/" "erc-mode/" "makefile-gmake-mode/" "README.md" "c-mode/" "lisp-mode/" "chef-mode/" "../" "LICENSE" "rename_add_contr.py" "cmake-mode/" "faust-mode/" "tuareg-mode/" "java-mode/" "rust-mode/" "cc-mode/" "cider-repl-mode" "applescript-mode/" "ensime-mode" "csharp-mode/" "git-commit-mode/" "scala-mode/" "css-mode/")
-
- ("/home/ian/Dropbox/" (22636 28387 334721 96000) ".dropbox" "Reinstall/" "Personal_stuff/" "./" "../" ".dropbox.cache/" "dbDesktop/")
-
- ("/home/ian/Dropbox/dbDesktop/ML/Research/explainable-ai/deconv/" (22636 25229 300180 881000) ".ipynb_checkpoints/" "./" "utils.py" ".#utils.py" "get_model.py" "Data/" "components/" "../" "KerasDeconv.py" "run_deconv.py")
 
  ("/home/ian/Dropbox/dbDesktop/ML/Research/explainable-ai/" (22636 25206 916965 655000) ".ipynb_checkpoints/" ".MT/" "deconv/" "DESCRIPTION" ".dir-locals.el" ".gitignore" ".scrape_im/" "./" "cam-san/" "image_boxes/" "../" ".git/" "documents/" "todo.org")
 
